@@ -1,0 +1,166 @@
+:root {
+  font-size: 62.5%;
+  --font-title: 'Montserrat', sans-serif;
+  --font-paragraph: 'DM Sans', sans-serif;
+  --font-cursive: 'Dancing Script', cursive;
+
+  --color-primary: #34355B;
+  --color-paper: #E4EDF1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  background-size: 200% 200%;
+  animation: background-animation 10s ease infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  background: #ffffff;
+  text-align: center;
+  
+  max-width: 42.8rem;
+  padding: 4.8rem 6.4rem;
+  border-radius: .5rem;
+  box-shadow: 0 2.0rem 5.0rem 0 rgba(0, 0, 0, 0.80);
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+}
+
+h1, p {
+  color: var(--color-primary);
+}
+
+p, button {
+  font-family: var(--font-paragraph);
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 1.7rem 0;
+}
+
+#fortune-cookie {
+  display: block;
+
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#fortune-cookie:hover {
+  animation: shake 800ms;
+  animation-iteration-count: infinite;
+}
+
+.screen2 p {
+  background: var(--color-paper);
+  color: #000000;
+
+  font-family: var(--font-cursive);
+  font-size: 2.4rem;
+
+  padding: 1rem;
+  box-shadow: .2rem .2rem .2rem 0 rgba(85, 85, 85, 0.50);
+
+  animation: up 2s reverse;
+}
+
+#btn-reset {
+  background: #FF9500;
+  color: #ffffff;
+
+  font-weight: bold;
+
+  padding: 1.6rem;
+  margin-top: 1.7rem;
+  border: none;
+  border-radius: .4rem;
+
+  transition: background 0.3s;
+}
+
+#btn-reset:hover {
+  cursor: pointer;
+  background: #d27c04;
+}
+
+@keyframes up {
+
+  0% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+
+  100% {
+    transform:  translateY(170px) scaleX(0) scaleY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-2px);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  30% {
+    transform: translateX(2px);
+  }
+  40% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
+  70% {
+    transform: translateX(2px);
+  }
+  80% {
+    transform: translateY(-2px);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes background-animation {
+  0% {
+    /* transform: scaleX(1) scaleY(1); */
+    background-position: 0% 50%;
+  }
+
+  50% {
+    /* transform: scaleX(0.5) scaleY(0.5); */
+    background-position: 100% 50%;
+  }
+
+  100% {
+    /* transform: scaleX(1) scaleY(1); */
+    background-position: 0% 50%;
+  }
+}
